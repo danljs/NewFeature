@@ -1,15 +1,20 @@
 package lambda;
 
-public class Person {
+import com.sun.istack.internal.Nullable;
 
+public class Person {
+	private int age;
+	private String name;
+	public Person(int age, @Nullable String name){
+		this.age = age;
+		this.name = name;
+	}
 	public int getAge() {
-		// TODO Auto-generated method stub
-		return 0;
+		return age;
 	}
 
 	public void printPerson() {
-		// TODO Auto-generated method stub
-		
+		System.out.println(name);
 	}
 
 }
