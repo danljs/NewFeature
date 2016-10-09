@@ -6,4 +6,8 @@ public interface NewInterface {
     default public void sayHi() {
       System.out.println("Hi");
     }
+    
+//    public static<T> FF<T> of(T...values){
+//    	return values;
+//    }
 }

@@ -1,6 +1,7 @@
 package newconsumer;
 
 import java.util.function.Consumer;
+import java.util.function.Function;
 
 public class ConsumerTest {
 
@@ -21,7 +22,9 @@ public class ConsumerTest {
 		myConsumer.accept(x);
 		myConsumer.accept(100);
 		myConsumer.accept(110);
-
+		
+		Function<String,String> ft = (name)->{return name + "adsf";};
+		System.out.println(ft.apply("adsffad"));
 	}
 
 	private static void printNames(String name) {
