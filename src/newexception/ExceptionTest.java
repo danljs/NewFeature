@@ -44,4 +44,45 @@ public class ExceptionTest {
 			throw ex;
 		}
 	}
+	
+	public void runnable(){
+		Runnable ra = ()->{
+			System.out.println("Hello Lambda!");
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		};
+		System.out.println("1");
+		ra.run();
+		System.out.println("2");
+		ra.run();
+		System.out.println("3");
+		ra.run();
+		System.out.println("4");
+		ra.run();
+		System.out.println("5");
+		
+		System.out.println("t1");
+		Thread t1 = new Thread(ra);
+		t1.start();
+		System.out.println("t2");
+		Thread t2 = new Thread(ra);
+		t2.start();
+		System.out.println("t3");
+		Thread t3 = new Thread(ra);
+		t3.start();
+		System.out.println("t4");
+		Thread t4 = new Thread(ra);
+		t4.start();
+		System.out.println("t5");
+		Thread t5 = new Thread(ra);
+		t5.start();
+	}
+	
+	public static void main(String[] args){
+		ExceptionTest et = new ExceptionTest();
+		et.runnable();
+	}
 }
