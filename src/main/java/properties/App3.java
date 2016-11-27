@@ -1,6 +1,7 @@
 package properties;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Enumeration;
 import java.util.Properties;
 
 public class App3 {
@@ -21,12 +22,18 @@ public class App3 {
 	
 			//load a properties file from class path, inside static method
 			prop.load(input);
-	
-	            //get the property value and print it out
-	            System.out.println(prop.getProperty("email"));
-		        System.out.println(prop.getProperty("sms"));
-		        System.out.println(prop.getProperty("voice"));
-	
+
+            //get the property value and print it out
+            System.out.println(prop.getProperty("email"));
+	        System.out.println(prop.getProperty("sms"));
+	        System.out.println(prop.getProperty("voice"));
+	        
+	        Enumeration<?> e = prop.propertyNames();
+	        while (e.hasMoreElements()) {
+				String key = (String) e.nextElement();
+				String value = prop.getProperty(key);
+				System.out.println("Key : " + key + ", Value : " + value);
+			}
 		} catch (IOException ex) {
 			ex.printStackTrace();
 	    }
