@@ -20,8 +20,12 @@ public class Persons {
 	        }
 	    }
 	}
+	// Functional interfaces have a single functionality to exhibit. 
+	// For example, a Comparable interface with a single method 'compareTo' is used for comparison purpose. 
+	// Java 8 has defined a lot of functional interfaces to be used extensively in lambda expressions.
 	interface CheckPerson {
 	    boolean test(Person p);
+//	    boolean test1(Person p);
 	}
 	public static void main(String[] args) {
 		List<Person> l = new ArrayList<Person>();
