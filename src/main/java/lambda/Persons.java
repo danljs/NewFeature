@@ -41,15 +41,6 @@ public class Persons {
 		Persons ps = new Persons();
 		ps.printPersonsOlderThan(l, 48);
 		ps.printPersons(l, (Person p) -> p.getAge() >= 38);
-		
-		new Thread(new Runnable() {
-             @Override
-             public void run() {
-                 System.out.println("run....");
-             }
-         }).start();
-		
-		new Thread(() -> {System.out.println("run lambda....");}).start();
 	}
 	
 }

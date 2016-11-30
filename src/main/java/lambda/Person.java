@@ -2,6 +2,7 @@ package lambda;
 
 import com.sun.istack.internal.Nullable;
 
+@SuppressWarnings("restriction")
 public class Person {
 	private int age;
 	private String name;
