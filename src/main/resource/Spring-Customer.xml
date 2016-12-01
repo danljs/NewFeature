@@ -52,16 +52,16 @@
 		</entry>
 	</util:map>
 	
-	<bean id="dynatrace-email-notifier" class="com.dawninfotek.aha.messenger.impl.DynaEmailNotifier">
-		<property name="sendFrom" value="aqahc@dawninfotek.com"/>
-		<property name="sendTo" value="daniel.liu@dawninfotek.com"/>
+	<bean id="dynatrace-email-notifier" class="bean.xml.EmailNotifier">
+		<property name="sendFrom" value="daniel.liu1973@gmail.com"/>
+		<property name="sendTo" value="daniel.liu1973@gmail.com"/>
 	</bean>
-	<bean id="dynatrace-sms-notifier" class="com.dawninfotek.aha.messenger.impl.DynaSmsNotifier">
-		<property name="phoneNumbers" value="4166278363" />
+	<bean id="dynatrace-sms-notifier" class="bean.xml.SmsNotifier">
+		<property name="phoneNumbers" value="6666666666" />
 		<property name="phoneProviders" value="BellMobility" />
 	</bean>
-	<bean id="dynatrace-voice-notifier" class="com.dawninfotek.aha.messenger.impl.DynaVoiceNotifier">
-		<property name="primaryContacts" value="4162715025" />
-		<property name="informContacts" value="4162772662" />
+	<bean id="dynatrace-voice-notifier" class="bean.xml.VoiceNotifier">
+		<property name="primaryContacts" value="6666666666" />
+		<property name="informContacts" value="6666666666" />
 	</bean>
 </beans>
