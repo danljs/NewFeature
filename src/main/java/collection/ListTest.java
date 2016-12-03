@@ -14,6 +14,7 @@ public class ListTest {
 		
 		List<String> m1 = new ArrayList<String>();
 		m1.addAll(l1);
+		System.out.println(l1.toString());
 	}
 
 }
